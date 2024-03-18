@@ -4,7 +4,7 @@ const pool = new Pool({
   host: 'localhost',
   database: 'newfieNook',
   password: 'password',
-  port: 5432,
+  port: 5050,
 });
 
 pool.connect((err) => {
