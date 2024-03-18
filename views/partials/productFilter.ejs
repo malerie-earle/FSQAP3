@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div id="search-container">
+    <input
+      type="search"
+      id="search-input"
+      placeholder="Search product name here.."
+    />
+    <button id="search">Search</button>
+  </div>
+  <div id="buttons">
+
+    <button class="button-value" onclick="filterProduct('all')">All</button>
+
+    <% for (let category of categories) { %>
+      <button class="button-value" onclick="filterProduct('<%= category %>')">
+        <%= category %>
+      </button>
+    <% } %>
+    
+  </div>
+  <div id="products"></div>
+</div>
+

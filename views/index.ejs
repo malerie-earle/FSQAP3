@@ -7,19 +7,53 @@
   <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
-  <!-- Include Nav Partial -->
-  <%- include('partials/nav') %>
-
-  <!-- Include Header Partial -->
-  <%- include('partials/header') %>
-
+  <div class = "announcementBar">
+    <h2>Discover Favourite Treats & Local Treasures From The Rock!</h2>
+  </div>
+  <nav> 
+    <div class = "navBox" id = "navBox1">
+      <a href = "/">
+        <img src = "/images/home (1).png" alt = "Home" class = "icon" id = "homeIcon" />
+      </a>
+    </div>
+  
+    <div class = "navBox" id = "navBox2">
+      <a href = "/pages/contact">
+        <img src = "/images/email.png" alt = "Contact" class = "icon" id = "contactIcon" />
+      </a>
+    </div>
+    
+    <img src = "/images/nlNookLogo.png" alt = "Newfie Nook Logo" class = "logo" />
+  
+    <div class = "navBox" id = "navBox3">
+      <a href = "/pages/about">
+        <img src = "/images/information.png" alt = "About" class = "icon" id = "infoIcon" />
+      </a>
+    </div>
+  
+    <div class = "navBox" id = "navBox4">
+      <a href = "/pages/account">
+        <img src = "/images/profile.png" alt = "LogIn" class = "icon" id = "logInIcon" />
+      </a>
+    </div>
+  </div>
+  </nav>
+  <header>
+    <div class ="banner">
+      <img src = "/images/nlbanner.png" alt = "Newfoundland Banner" class = "bannerImg" />
+    </div>
+  </header>
+  
   <div class="home">
-  <!-- Include Product List-->
-  <%- include('partials/products') %>
+    <%- include('partials/products') %>
   </div>
 
-  <!-- Include Footer Partial -->
-  <%- include('partials/footer') %>
-<script type="module" src="/scripts/scripts.js"></script>
+<footer>
+  <p>
+  © Copyright Malerie Earle - 2024
+  </p>
+  <a href = "#" target="_blank">
+  <h3 class = "collaborators">Malerie Earle</h3></a><br />
+</footer>
 </body>
 </html>

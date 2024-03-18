@@ -1,4 +1,6 @@
-<h1 class = "productsH1">Products</h1>
+
+<div "home">
+<h1 class = "products">Products</h1>
 <div class = "productList">
 <% for(let product of products) { %>
   <center>
@@ -6,9 +8,36 @@
     <h2><%= product.product_name %></h2>
     <img class = "prodImg" src = <%= product.image %></>
     <p><%= product.description %></p>
-    <p><%= product.category_ID.category_name %></p>
+    <% if (product.category_id == 1) { %>
+      <p>Books</p>
+    <% } else if (product.category_id == 2) { %>
+      <p>Arts & Crafts</p>
+    <% } else if (product.category_id == 3) { %>
+      <p>Bath & Body</p>
+    <% } else if (product.category_id == 4) { %>
+      <p>Books</p>
+    <% } else if (product.category_id == 5) { %>
+      <p>Clothing & Apparel</p>
+    <% } else if (product.category_id == 6) { %>
+      <p>Collectible Pins</p>
+    <% } else if (product.category_id == 7) { %>
+      <p>Fine Art</p>
+    <% } else if (product.category_id == 8) { %>
+      <p>Food & Drink</p>
+    <% } else if (product.category_id == 9) { %>
+      <p>Garden</p>
+    <% } else if (product.category_id == 10) { %>
+      <p>Handmade</p>
+    <% } else if (product.category_id == 11) { %>
+      <p>Merchandise</p>
+    <% } else if (product.category_id == 12) { %>
+      <p>Seasonal</p>
+    <% } else if (product.category_id > 12) { %>
+      <p>Other</p>
+    <% } %>
     <p>$<%= product.price %></p>
   </div>
 </center>
 <% }; %>
 </div></div>
+</div>
