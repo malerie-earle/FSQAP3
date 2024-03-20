@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
+  "name": "fs-qap3",
+  "version": "1.0.0",
+  "description": "QAP3",
+=======
   "name": "fsqap3",
   "version": "1.0.0",
   "description": "QAP3 for Database and Full Stack",
+>>>>>>> main
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +16,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "ejs": "^3.1.9",
+    "express": "^4.19.0",
+    "method-override": "^3.0.0",
+    "pg": "^8.11.3",
+    "winston": "^3.12.0"
+=======
     "method-override": "^3.0.0"
+>>>>>>> main
   }
 }

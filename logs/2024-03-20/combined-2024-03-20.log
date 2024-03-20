@@ -1,0 +1,11 @@
+[40m2024-03-20 05:33:26.402 PM info: [32mThis is an information message.[39m[49m
+[40m2024-03-20 05:33:26.403 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-03-20 05:33:26.404 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-20 05:33:26.404 PM info: [32mServer is starting[39m[49m
+[40m2024-03-20 05:33:26.445 PM info: [32mA new log file was created: logs/2024-03-20/combined-2024-03-20.log[39m[49m
+[40m2024-03-20 05:33:49.630 PM error: [31mUncaught Exception: err is not defined[39m[49m
+[40m2024-03-20 05:34:47.369 PM info: [32mThis is an information message.[39m[49m
+[40m2024-03-20 05:34:47.370 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-03-20 05:34:47.371 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-20 05:34:47.371 PM info: [32mServer is starting[39m[49m
+[40m2024-03-20 05:34:47.429 PM info: [32mA new log file was created: logs/2024-03-20/combined-2024-03-20.log[39m[49m

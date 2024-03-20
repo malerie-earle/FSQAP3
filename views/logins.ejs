@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newfie Nook</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+    <%- include('./partials/header.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class="logins content">
+            <form action="/logins" method="POST">
+                <b>Logins: </b></br> 
+            <% if (theLogins.length > 0) { %>
+                <% theLogins.forEach(login => { %>
+                    <b><%= login.username %></b>
+                    <a href="/logins/<%=login.customer_id%>/edit?username=<%=login.username%>&email=<%=login.email%>">edit</a>
+                    <a href="/logins/<%=login.customer_id%>/delete?username=<%=login.username%>">delete</a></br> 
+                    <% }) %>
+            <% } %>
+            </br><label>Add Login:</label></br>
+            <label>Username:
+                <input type="text" id="username" name="username" value="<%= customer.username %>" required>
+            </label>
+            <label>Password:
+                <input type="password" id="password" name="password" value="<%= customer.password %>" required>
+            </label>
+            <label>Email:
+                <input type="email" id="email" name="email" value="<%= customer.email %>" required>
+            </label>
+            </br>
+            <button>POST</button>
+        </form>
+        </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+</html>
