@@ -1,9 +1,11 @@
 // Imports
+const http = require('http');
 const express = require('express');
 const urlencoded = express.urlencoded;
 const methodOverride = require('method-override');
-const pool = require('./services/pg.auth_db');
-const { logger, myEmitter } = require('./logEvents.js');
+const ejs = require('ejs');
+const pg = require('pg');
+const pool = require('./services/pg.auth.dal');
 
 const app = express();
 const port = 5051;
