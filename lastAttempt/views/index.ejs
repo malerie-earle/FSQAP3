@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QAP3</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class="home">
+    <h1>Welcome to the <%= title %> <%= name %>!</h1>
+    <a href="/customers/">All Customers</a>
+    <a href="/customer/search/">Search for a Customer</a>
+    <a href="/customer/add/">Add Customer</a>
+    <h3>Edit Customer:</h3>
+    <form action="/customer/edit" method="POST">
+      <label for="id">Enter Customer ID:</label>
+      <input type="text" id="id" name="id" required>
+      <input type="submit" value="Edit Customer">
+    </form>
+    <a href="/customer/delete/">Delete Customer</a>
+    <h3>Delete Customer:</h3>
+    <form action="/customer/delete" method="POST">
+      <label for="id">Enter Customer ID:</label>
+      <input type="text" id="id" name="id" required>
+      <input type="submit" value="Delete Customer">
+    </form>
+  </div>
+</body>
+</html>

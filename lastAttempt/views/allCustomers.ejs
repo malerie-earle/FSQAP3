@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View All Customers</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<div class = "home">
+  <div class="customers-content"> 
+    <h1>All Customers:</h1>
+    <!-- Display existing customers -->
+    <% if (theCustomers.length > 0) { %>
+        <% theCustomers.forEach(customer => { %>
+            <div class="customerDiv">
+                <div class="label-data-pair">
+                    <b>Customer ID:</b> <%= customer.customer_id %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Name:</b> <%= customer.first_name %> <%= customer.last_name %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Email:</b> <%= customer.email %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Username:</b> <%= customer.username %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Password:</b> <%= customer.password %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Address:</b> <%= customer.address %>
+                </div>
+                <div class="label-data-pair">
+                    <b>Payment Method:</b> <%= customer.payment_method %>
+                </div>
+                <br>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <p>No customers found.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>
