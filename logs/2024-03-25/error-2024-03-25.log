@@ -1,0 +1,36 @@
+[40m2024-03-25 02:04:55.005 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 02:04:55.100 PM error: [31mError connecting to the database database "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:07:59.054 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 02:07:59.152 PM error: [31mError connecting to the database database "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:08:16.768 PM error: [31mdatabase "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:08:16.772 PM error: [31mError getting home page database "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:08:17.889 PM error: [31mdatabase "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:08:17.890 PM error: [31mError getting home page database "keyinstudent" does not exist[39m[49m
+[40m2024-03-25 02:11:22.261 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 02:12:11.316 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 02:19:38.986 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 02:19:52.014 PM error: [31mError getting customers getCustomers is not defined[39m[49m
+[40m2024-03-25 02:19:54.751 PM error: [31mError getting customers getCustomers is not defined[39m[49m
+[40m2024-03-25 02:21:09.848 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:13:23.495 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:14:54.042 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:17:57.482 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:21:48.196 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:27:57.333 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:33:28.042 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 03:37:39.605 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 07:45:59.565 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 09:22:53.749 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 09:46:43.723 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:13:31.933 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:23:23.208 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:26:02.910 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:27:03.792 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:27:47.559 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:33:45.486 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:33:57.177 PM error: [31mError getting customer page getCustomerByLastName is not defined[39m[49m
+[40m2024-03-25 10:36:10.855 PM error: [31mError getting customer page getCustomerByLastName is not defined[39m[49m
+[40m2024-03-25 10:36:15.538 PM error: [31mError getting customer page getCustomerByLastName is not defined[39m[49m
+[40m2024-03-25 10:39:24.788 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 10:44:35.809 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-25 11:14:19.349 PM error: [31mThis is an error message.[39m[49m

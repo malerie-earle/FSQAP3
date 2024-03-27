@@ -1,0 +1,730 @@
+[40m2024-03-26 01:54:48.178 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 01:59:18.965 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 02:09:50.507 PM error: [31mError creating new customer pool is not defined[39m[49m
+[40m2024-03-26 02:12:34.577 PM error: [31mError creating new customer pool is not defined[39m[49m
+[40m2024-03-26 02:13:50.928 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 02:26:17.775 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 02:28:37.042 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:13:40.325 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:17:38.150 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:21:49.733 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:26:12.411 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:33:33.380 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:33:46.588 PM error: [31mError getting customer page customer_id is not defined[39m[49m
+[40m2024-03-26 04:45:09.595 PM error: [31mError getting customer page customer_id is not defined[39m[49m
+[40m2024-03-26 04:45:21.176 PM error: [31mError getting customer page customer_id is not defined[39m[49m
+[40m2024-03-26 04:45:29.148 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:50:03.991 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:54:49.197 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 04:55:45.379 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:25:21.717 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:30:28.829 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:30:31.780 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:15[39m[49m
+[40m[31m    13|             <h1>Edit Customer - Select a Customer:</h1>[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m >> 15|             <%- include('./customer.ejs') %>[39m[49m
+[40m[31m    16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer:</h2>[39m[49m
+[40m[31m >> 15|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    16|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    17|           <h3>[39m[49m
+[40m[31m    18|             <b>Name:</b> <%= aCustomer.first_name %> <%= aCustomer.last_name %> <br>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:8)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:32:10.028 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:15[39m[49m
+[40m[31m    13|             <h1>Edit Customer - Select a Customer:</h1>[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m >> 15|             <!-- <%- include('./customer.ejs') %> -->[39m[49m
+[40m[31m    16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer:</h2>[39m[49m
+[40m[31m >> 15|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    16|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    17|           <h3>[39m[49m
+[40m[31m    18|             <b>Name:</b> <%= aCustomer.first_name %> <%= aCustomer.last_name %> <br>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:8)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:32:42.196 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:32:50.733 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:15[39m[49m
+[40m[31m    13|             <h1>Edit Customer - Select a Customer:</h1>[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m >> 15|             <!-- <%- include('./customer.ejs') %> -->[39m[49m
+[40m[31m    16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer:</h2>[39m[49m
+[40m[31m >> 15|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    16|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    17|           <h3>[39m[49m
+[40m[31m    18|             <b>Name:</b> <%= aCustomer.first_name %> <%= aCustomer.last_name %> <br>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:8)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:33:03.411 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="POST">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:33:15.414 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:34:24.875 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="POST">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:46:26.079 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:46:33.456 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 05:54:26.923 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 05:59:02.670 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:02:21.964 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:06:44.170 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:21:59.576 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:22:05.152 PM error: [31moperator does not exist: character varying = integer[39m[49m
+[40m2024-03-26 06:24:08.872 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:24:52.535 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:25:36.818 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:25:40.683 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 06:25:50.761 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 06:28:16.679 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:28:24.364 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:16[39m[49m
+[40m[31m    14|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    15|           [39m[49m
+[40m[31m >> 16|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    17|     </body>[39m[49m
+[40m[31m    18|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    19| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 06:42:14.001 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:46:31.311 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:46:40.157 PM error: [31mError: operator does not exist: character varying = integer[39m[49m
+[40m2024-03-26 06:46:40.159 PM error: [31mError: Failed to lookup view "error" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:195:21[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 06:51:56.282 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 06:52:03.414 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:20[39m[49m
+[40m[31m    18|             <button type="submit">Update Customer</button>[39m[49m
+[40m[31m    19|             </form>[39m[49m
+[40m[31m >> 20|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    21|     </body>[39m[49m
+[40m[31m    22|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    23| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 07:00:58.338 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 07:01:05.204 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:80[39m[49m
+[40m[31m    78|    </div>[39m[49m
+[40m[31m    79| [39m[49m
+[40m[31m >> 80|   <form action="/customer/edit/<%= aCustomer.customer_id %>" method="PUT">[39m[49m
+[40m[31m    81|     <label for="first_name">First Name:</label>[39m[49m
+[40m[31m    82|     <input type="text" id="first_name" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+[40m[31m    83|     [39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":12:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:181:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 07:19:34.109 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:17[39m[49m
+[40m[31m    15|             <%- include('./partials/search.ejs') %>[39m[49m
+[40m[31m    16|           [39m[49m
+[40m[31m >> 17|             <%- include('./partials/edit.ejs') %>[39m[49m
+[40m[31m    18|     </body>[39m[49m
+[40m[31m    19|     <%- include('./partials/footer.ejs') %>[39m[49m
+[40m[31m    20| </html>[39m[49m
+
+[40m[31m/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs:2[39m[49m
+[40m[31m    1| <div class="edit-content">[39m[49m
+[40m[31m >> 2|   <form action="/customer/<%= customer.customer_id %>?_method=PATCH" method="PATCH">[39m[49m
+[40m[31m    3|       <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    4|           <input type="text" name="first_name" value="<%= customer.first_name %>" required>[39m[49m
+[40m[31m    5|           <input type="text" name="last_name" value="<%= customer.last_name %>" required>[39m[49m
+
+[40m[31mcustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/partials/edit.ejs":12:26)[39m[49m
+[40m[31m    at edit (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at include (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:701:39)[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":21:17)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m2024-03-26 07:19:41.733 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 07:19:48.554 PM error: [31mError searching for customer: operator does not exist: character varying = integer[39m[49m
+[40m2024-03-26 07:19:48.556 PM error: [31mError: Failed to lookup view "error" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:187:21[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 07:41:53.474 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 07:42:01.620 PM error: [31mError searching for customer: operator does not exist: character varying = integer[39m[49m
+[40m2024-03-26 07:49:08.939 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 07:51:32.645 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 07:58:57.120 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:00:02.767 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:00:06.219 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:15[39m[49m
+[40m[31m    13|             <h1>Edit Customer - Select a Customer:</h1>[39m[49m
+[40m[31m    14|             [39m[49m
+[40m[31m >> 15|             <%- include('./partials/search.ejs', { aCustomer }) %>[39m[49m
+[40m[31m    16|           [39m[49m
+[40m[31m    17|             <%- include('./partials/edit.ejs', { aCustomer }) %>[39m[49m
+[40m[31m    18|     </body>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:52)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:181:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:00:13.425 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:15[39m[49m
+[40m[31m    13|             <h1>Edit Customer - Select a Customer:</h1>[39m[49m
+[40m[31m    14|             [39m[49m
+[40m[31m >> 15|             <%- include('./partials/search.ejs', { aCustomer }) %>[39m[49m
+[40m[31m    16|           [39m[49m
+[40m[31m    17|             <%- include('./partials/edit.ejs', { aCustomer }) %>[39m[49m
+[40m[31m    18|     </body>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:52)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:181:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:04:39.972 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:09:49.447 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:18:04.817 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:20:23.471 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:28:31.006 PM error: [31mError: Could not find matching close tag for "<%=".[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:752:19[39m[49m
+[40m[31m    at Array.forEach (<anonymous>)[39m[49m
+[40m[31m    at Template.generateSource (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:742:15)[39m[49m
+[40m[31m    at Template.compile (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:587:12)[39m[49m
+[40m[31m    at Object.compile (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:398:16)[39m[49m
+[40m[31m    at handleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:235:18)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:16)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m2024-03-26 08:28:39.022 PM error: [31mError: Could not find matching close tag for "<%=".[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:752:19[39m[49m
+[40m[31m    at Array.forEach (<anonymous>)[39m[49m
+[40m[31m    at Template.generateSource (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:742:15)[39m[49m
+[40m[31m    at Template.compile (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:587:12)[39m[49m
+[40m[31m    at Object.compile (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:398:16)[39m[49m
+[40m[31m    at handleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:235:18)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:16)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m2024-03-26 08:29:41.652 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:29:52.578 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:13[39m[49m
+[40m[31m    11|         <%- include('./partials/nav.ejs') %>[39m[49m
+[40m[31m    12|         <div class = "home"> <br>[39m[49m
+[40m[31m >> 13|           <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">[39m[49m
+[40m[31m    14|             <input type = "hidden" name = "_method" value = "PUT">[39m[49m
+[40m[31m    15|               <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    16|                   <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:181:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:31:48.881 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:32:07.262 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:13[39m[49m
+[40m[31m    11|         <%- include('./partials/nav.ejs') %>[39m[49m
+[40m[31m    12|         <div class = "home"> <br>[39m[49m
+[40m[31m >> 13|           <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">[39m[49m
+[40m[31m    14|             <input type = "hidden" name = "_method" value = "PUT">[39m[49m
+[40m[31m    15|               <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    16|                   <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:181:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:35:38.401 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:37:52.971 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:38:09.436 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:38:09.463 PM error: [31mError searching for customer: Cannot set headers after they are sent to the client[39m[49m
+[40m2024-03-26 08:39:30.931 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:39:37.519 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:39:37.551 PM error: [31mError searching for customer: Cannot set headers after they are sent to the client[39m[49m
+[40m2024-03-26 08:40:44.537 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:40:44.564 PM error: [31mError searching for customer: Cannot set headers after they are sent to the client[39m[49m
+[40m2024-03-26 08:40:56.048 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:41:02.904 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:41:22.668 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:41:31.135 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 08:41:51.336 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:42:36.222 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:13[39m[49m
+[40m[31m    11|         <%- include('./partials/nav.ejs') %>[39m[49m
+[40m[31m    12|         <div class = "home"> <br>[39m[49m
+[40m[31m >> 13|           <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">[39m[49m
+[40m[31m    14|             <input type = "hidden" name = "_method" value = "PUT">[39m[49m
+[40m[31m    15|               <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    16|                   <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:169:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:46:46.932 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:47:04.921 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:13[39m[49m
+[40m[31m    11|         <%- include('./partials/nav.ejs') %>[39m[49m
+[40m[31m    12|         <div class = "home"> <br>[39m[49m
+[40m[31m >> 13|           <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">[39m[49m
+[40m[31m    14|             <input type = "hidden" name = "_method" value = "PUT">[39m[49m
+[40m[31m    15|               <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    16|                   <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:179:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m2024-03-26 08:53:53.126 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 08:54:18.796 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer Result:</h2>[39m[49m
+[40m[31m >> 15|     <h3>Search Term: <%= searchTerm %> </h3>[39m[49m
+[40m[31m    16|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    17|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    18|           <h3>[39m[49m
+
+[40m[31msearchTerm is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:26)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:77:9[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 09:02:29.955 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:02:38.208 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer Result:</h2>[39m[49m
+[40m[31m >> 15|     <h3>Search Term: <%= searchTerm %> </h3>[39m[49m
+[40m[31m    16|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    17|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    18|           <h3>[39m[49m
+
+[40m[31msearchTerm is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:26)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:63:9[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 09:03:14.396 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:03:20.866 PM error: [31mError: Failed to lookup view "searchCustomer.ejs" in views directory "/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views"[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:597:17)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:46:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:149:13)[39m[49m
+[40m[31m    at Route.dispatch (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/route.js:119:3)[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:284:15[39m[49m
+[40m[31m    at Function.process_params (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:346:12)[39m[49m
+[40m[31m    at next (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/index.js:280:10)[39m[49m
+[40m2024-03-26 09:04:01.138 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:04:11.750 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer Result:</h2>[39m[49m
+[40m[31m >> 15|     <h3>Search Term: <%= searchTerm %> </h3>[39m[49m
+[40m[31m    16|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    17|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    18|           <h3>[39m[49m
+
+[40m[31msearchTerm is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:26)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:68:9[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 09:13:51.270 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:14:05.796 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer Result:</h2>[39m[49m
+[40m[31m >> 15|     <h3>Search Term: <%= searchTerm %> </h3>[39m[49m
+[40m[31m    16|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    17|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    18|           <h3>[39m[49m
+
+[40m[31msearchTerm is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:26)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:63:9[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 09:15:26.122 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:32:11.896 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 09:32:22.301 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs:15[39m[49m
+[40m[31m    13|   <div class="customer-content">[39m[49m
+[40m[31m    14|     <h2>Customer Result:</h2>[39m[49m
+[40m[31m >> 15|     <h3>Search Term: <%= searchTerm %> </h3>[39m[49m
+[40m[31m    16|     <% if (aCustomer && aCustomer.length > 0) { %>[39m[49m
+[40m[31m    17|         <% aCustomer.forEach(function(aCustomer) { %>[39m[49m
+[40m[31m    18|           <h3>[39m[49m
+
+[40m[31msearchTerm is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/customer.ejs":18:26)[39m[49m
+[40m[31m    at customer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:100:9[39m[49m
+[40m[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[49m
+[40m2024-03-26 09:34:03.860 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:05:10.159 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:07:25.698 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:13:50.489 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:16:07.094 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:16:16.628 PM error: [31mError getting customer page Query values must be an array[39m[49m
+[40m2024-03-26 10:20:47.247 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:20:55.865 PM error: [31minvalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:20:55.866 PM error: [31mError getting customer page invalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:28:10.928 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:28:29.529 PM error: [31minvalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:28:29.530 PM error: [31mError getting customer page invalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:29:31.216 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:29:41.130 PM error: [31minvalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:29:41.132 PM error: [31mError getting customer page invalid input syntax for type integer: "id"[39m[49m
+[40m2024-03-26 10:33:57.967 PM error: [31mThis is an error message.[39m[49m
+[40m2024-03-26 10:34:19.707 PM error: [31mReferenceError: /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs:13[39m[49m
+[40m[31m    11|         <%- include('./partials/nav.ejs') %>[39m[49m
+[40m[31m    12|         <div class = "home"> <br>[39m[49m
+[40m[31m >> 13|           <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">[39m[49m
+[40m[31m    14|             <input type = "hidden" name = "_method" value = "PUT">[39m[49m
+[40m[31m    15|               <label>Edit Customer Fields:</br>[39m[49m
+[40m[31m    16|                   <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>[39m[49m
+
+[40m[31maCustomer is not defined[39m[49m
+[40m[31m    at eval ("/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/views/editCustomer.ejs":18:26)[39m[49m
+[40m[31m    at editCustomer (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:703:17)[39m[49m
+[40m[31m    at tryHandleCache (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:274:36)[39m[49m
+[40m[31m    at exports.renderFile [as engine] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/ejs/lib/ejs.js:491:10)[39m[49m
+[40m[31m    at View.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/view.js:135:8)[39m[49m
+[40m[31m    at tryRender (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:657:10)[39m[49m
+[40m[31m    at Function.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/application.js:609:3)[39m[49m
+[40m[31m    at ServerResponse.render (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/response.js:1057:7)[39m[49m
+[40m[31m    at /Users/keyinstudent/Documents/S3-QAP3/FSQAP3/routes/customerRouter.js:164:7[39m[49m
+[40m[31m    at Layer.handle [as handle_request] (/Users/keyinstudent/Documents/S3-QAP3/FSQAP3/node_modules/express/lib/router/layer.js:95:5)[39m[49m

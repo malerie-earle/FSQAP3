@@ -1,17 +1,22 @@
-const Pool = require('pg').Pool
+const { Pool } = require('pg');
+const { logger } = require('../logEvents');
+require('dotenv').config();
+
+// Create a new pool with the connection details
 const pool = new Pool({
-  user: 'malerie',
-  host: 'localhost',
-  database: 'newfieNook',
-  password: 'password',
-  port: 5050,
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 });
 
-pool.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database', err);
+// Connect to the pool
+pool.connect((error) => {
+  if (error) {
+    logger.error('Error connecting to the database', error);
   } else {
-    console.log('Connected to the PostgreSQL database newfieNook!');
+    logger.info('Connected to the PostgreSQL Database newfieNook!');
   }
 });
 

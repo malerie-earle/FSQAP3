@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newfie Nook</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+    <%- include('./partials/header.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class = "home"> <br>
+          <form action="/customer/edit/<%= aCustomer.customer_id %>" method="POST">
+            <input type = "hidden" name = "_method" value = "PUT">
+              <label>Edit Customer Fields:</br>
+                  <input type="text" name="first_name" value="<%= aCustomer.first_name %>" required>
+                  <input type="text" name="last_name" value="<%= aCustomer.last_name %>" required>
+                  <input type="text" name="email" value="<%= aCustomer.email %>" required>
+                  <input type="text" name="username" value="<%= aCustomer.username %>" required>
+                  <input type="text" name="password" value="<%= aCustomer.password %>" required>
+                  <input type="text" name="address" value="<%= aCustomer.address %>" required>
+                  <input type="text" name="payment_method" value="<%= aCustomer.payment_method %>" required>
+              </label></br>
+              <button>UPDATE</button>
+          </form>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+</html>

@@ -13,10 +13,17 @@
   <!-- Include Header Partial -->
   <%- include('partials/header') %>
 
-  <div class="home">
-  <!-- Include Product List-->
-  <%- include('partials/products') %>
-  </div>
+<div class = "home">
+<h1>Welcome to the <%= title %> <%= name %>!</h1>
+  <p>Where you can find all your Newfoundland needs!</p>
+    <a href="/customers/" class="button">All Customers</a>
+    <a href="/customer/new/" class="button">Add a Customer</a>
+    <a href="/customer/search/" class="button">Find a Customer</a>
+    <a href="/customer/edit/" class="button">Edit a Customer</a>
+    <a href = "/customer/delete/" class="button">Delete a Customer</a>
+    <a href="/products/" class="button">All Products</a>
+
+ </div>
 
   <!-- Include Footer Partial -->
   <%- include('partials/footer') %>

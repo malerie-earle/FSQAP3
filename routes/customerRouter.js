@@ -1,175 +1,170 @@
-// Imports
 const express = require('express');
 const router = express.Router();
 const pool = require('../services/pg.auth_db');
+const { logger } = require('../logEvents.js');
+const { getCustomers, getCustomerByCustomerId, getCustomerByFirstName, getCustomerByLastName, getCustomerByEmail, getCustomerByUsername, addCustomer, editCustomer, deleteCustomer } = require('../services/pg.customers.dal');
+const uuid = require('uuid');
+const bcrypt = require('bcrypt');
+const app = express();
+const PORT = process.env.PORT || 5051;
 
+// List of routes
+console.log('Customer Routes: '); {
+  console.log('ROUTE: /');
+  console.log('ROUTE: /customers/');
+  console.log('ROUTE: /customer/search');
+  console.log('ROUTE: /customer/id/');
+  console.log('ROUTE: /customer/first_name/');
+  console.log('ROUTE: /customer/last_name/');
+  console.log('ROUTE: /customer/first_name/last_name/');
+  console.log('ROUTE: /customer/email/');
+  console.log('ROUTE: /customer/username/');
+  console.log('ROUTE: /customer/new/');
+  console.log('ROUTE: /customer/edit/');
+  console.log('ROUTE: /customer/delete/');
+};
 
-// GET - Read
-// All customers - api/customers
-router.get('/', async (req, res) => {
+// GET - Read: Home Page - /
+router.get('/', (req, res) => {
+  res.render('index.ejs', { title: 'Home Page', name: 'Malerie' });
+});
+
+// GET - Read All Customers - /customers/
+router.get('/customers/', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM customer');
-    res.render('api/customer', { customer: result.rows });
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Error');
+    const theCustomers = await getCustomers();
+    logger.info(`Customers: ${JSON.stringify(theCustomers)}`);
+    res.render('customers.ejs', { title: 'Customers', theCustomers });
+  } catch (error) {
+    logger.error('Error getting customers page', error);
+    res.status(503).render('503');
   }
 });
 
-// search for a customer - api/customers/:id
-router.get('/:id', async (req, res) => {
+// GET - Search Customers - /search/
+router.get('/customer/search/', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM customer WHERE id = $1', [req.params.id]);
-    res.render('api/customer/:id', { customer: result.rows });
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Error');
+    res.render('searchCustomers.ejs');
+  } catch (error) {
+    logger.error('Error getting search page', error);
+    res.status(503).render('503');
   }
 });
 
-// search for a customer - api/customers/:first_name
-router.get('api/customer/:first_name', async (req, res) => {
+// GET - Read Customer by customer_id - /customer/:id
+router.get('/customer/id/', async (req, res) => {
+  const searchTerm = req.query.search;
+  if (searchTerm) {
   try {
-    const result = await pool.query('SELECT * FROM customer WHERE first_name = $1', [req.params.first_name]);
-    res.render('api/customer/:first_name', { customer: result.rows });
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Error');
+    const aCustomer = await getCustomerByCustomerId(searchTerm);
+    logger.info(`Customer: ${JSON.stringify(aCustomer)}`);
+    res.render('customer.ejs', { aCustomer });
+  } catch (error) {
+    logger.error('Error getting customer page', error);
+    res.status(503).render('503');
   }
-});
-
-// search for a customer - api/customers/:last_name
-router.get('api/customer/:last_name', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM customer WHERE last_name = $1', [req.params.last_name]);
-    res.render('api/customer/:last_name', { customer: result.rows });
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Error');
-  }
-});
-
-// search for a customer - api/customers/:first_name/:last_name
-router.get('/api/customer/:first_name/:last_name/', async (req, res) => {
-  try {
-    const { first_name, last_name} = req.params;
-    const fullName = first_name + ' ' + last_name;
-    const result = await pool.query('SELECT * FROM customer WHERE (first_name || \' \' || last_name) = $1', [fullName]);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server error');
-  }
-});
-
-// search for a customer = api/customers/:email
-router.get('api/customer/:email', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM customer WHERE email = $1', [req.params.email]);
-    res.render('api/customer/:email', { customer: result.rows });
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Error');
-  }
-});
-
-// POST - Create
-// Create a new customer
-router.post('/new', async (req, res) => {
-  try {
-    const { first_name, last_name, email } = req.body;
-    const result = await pool.query('INSERT INTO customer (first_name, last_name, email) VALUES ($1, $2, $3)', [first_name, last_name, email]);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server error');
-  }
-});
-
-// PUT - Update
-// Update a customer
-router.put('/:id/update', async (req, res) => {
-  try {
-    const { first_name, last_name, email, username, password, address, payment_method } = req.body;
-    const result = await pool.query('UPDATE customer SET first_name = $1, last_name = $2, email = $3 WHERE id = $4', [first_name, last_name, email, username, password, address, payment_method, req.params.id]);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server error');
-  }
-});
-
-// DELETE - Delete
-// Delete a customer
-router.delete('/:id/delete', async (req, res) => {
-  try {
-    const result = await pool.query('DELETE FROM customer WHERE id = $1', [req.params.id]);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server error');
-  }
-});
-
-const loginsDal = require('../services/pg.logins.dal')
-
-router.get('/', async (req, res) => {
-  try {
-    let theLogins = await loginsDal.getLogins(); 
-     if(DEBUG) console.table(theLogins);
-     res.render('logins', {theLogins});
- } catch {
-     res.render('503');
+ } else {
+    res.render('norecord.ejs');
+  }  
  }
+);
+
+// GET - Read Customer by first_name - /customer/first_name/
+router.get('/customer/first_name/', async (req, res) => {
+  const searchTerm = req.query.search;
+  if (searchTerm) {
+  try {
+    const aCustomer = await getCustomerByFirstName(searchTerm);
+    logger.info(`Customer: ${JSON.stringify(aCustomer)}`);
+    res.render('customer.ejs', { aCustomer });
+  } catch (error) {
+    logger.error('Error getting customer page', error);
+    res.status(503).render('503');
+  }
+ } else {
+    res.render('norecord.ejs');
+  }  
+ }
+);
+
+// GET - Read Customer by last_name - /customer/last_name/
+router.get('/customer/last_name/', async (req, res) => {
+  const searchTerm = req.query.search;
+  if (searchTerm) {
+  try {
+    const aCustomer = await getCustomerByLastName(searchTerm);
+    logger.info(`Customer: ${JSON.stringify(aCustomer)}`);
+    res.render('customer.ejs', { aCustomer });
+  } catch (error) {
+    logger.error('Error getting customer page', error);
+    res.status(503).render('503');
+  }
+ } else {
+    res.render('norecord.ejs');
+  }  
+ }
+);
+
+// GET - Read Customer by email - /customer/email/
+router.get('/customer/email/', async (req, res) => {
+  const searchTerm = req.query.search;
+  if (searchTerm) {
+  try {
+    const aCustomer = await getCustomerByEmail(searchTerm);
+    logger.info(`Customer: ${JSON.stringify(aCustomer)}`);
+    res.render('customer.ejs', { aCustomer });
+  } catch (error) {
+    logger.error('Error getting customer page', error);
+    res.status(503).render('503');
+  }
+ } else {
+    res.render('norecord.ejs');
+  }  
+ }
+);
+
+// GET - Read Customer by username - /customer/username/
+router.get('/customer/username/', async (req, res) => {
+  const searchTerm = req.query.search;
+  if (searchTerm) {
+  try {
+    const aCustomer = await getCustomerByUsername(searchTerm);
+    logger.info(`Customer: ${JSON.stringify(aCustomer)}`);
+    res.render('customer.ejs', { aCustomer });
+  } catch (error) {
+    logger.error('Error getting customer page', error);
+    res.status(503).render('503');
+  }
+ } else {
+    res.render('norecord.ejs');
+  }  
+ }
+);
+
+// GET - Display the form to create a new customer
+router.get('/customer/new/', (req, res) => {
+  res.render('addCustomer.ejs');
 });
 
-router.get('/:customer_id', async (req, res) => {
+// POST - CREATE a new Customer
+router.post('/customer/new/', async (req, res) => {
+  const { first_name, last_name, email, username, password, address, payment_method } = req.body;
   try {
-    let aLogin = await loginsDal.getLoginByLoginId(req.params.customer_id);
-    if(DEBUG) console.table(aLogin);
-    if (aLogin.length === 0)
-      res.render('norecord')
-    else
-      res.render('login', {aLogin});
-  } catch {
-    res.render('503');
+    const newCustomer = await addCustomer(first_name, last_name, email, username, password, address, payment_method);
+    logger.info(`New Customer: ${JSON.stringify(newCustomer)}`);
+    res.redirect('/customers/');  // Redirect to the list of customers
+  } catch (error) {
+    logger.error('Error creating new customer', error);
+    res.status(503).render('503');
   }
 });
 
-router.get('/:id/edit', async (req, res) => {
-  if(DEBUG) console.log('login.Edit : ' + req.params.id);
-  res.render('loginPatch.ejs', {customer_id: req.params.customer_id, first_name: req.query.first_name, last_name: req.query.last_name, email: req.query.email, username: req.query.username, password: req.query.password, address: req.query.address, payment_method: req.query.payment_method});
+// GET - Display the form to edit a customer
+router.get('/customer/edit/', async (req, res) => {
+  res.render('editCustomer.ejs');
 });
 
-router.post('/new', async (req, res) => {
-  if(DEBUG) console.log('logins.Post');
-  try {
-    await loginsDal.addLogin(req.body.username, req.body.password, req.body.first_name, req.body.last_name, req.body.email, req.body.address, req.body.payment_method);
-    res.redirect('/logins/');
-  } catch (err) {
-    if(DEBUG) console.log(err);
-    res.render('503');
-  }
-});
 
-router.patch('/:id/update', async (req, res) => {
-  if(DEBUG) console.log('logins.PATCH: ' + req.params.customer_id);  
-  try {
-    await loginsDal.patchLogin(req.params.customer_id, req.body.first_name, req.body.last_name, req.body.email, req.body.username, req.body.password, req.body.address, req.body.payment_method);
-    res.redirect('/logins/update');
-  } catch{
-    res.render('503');
-  }
-});
 
-router.delete('/:id/delete', async (req, res) => {
-  if(DEBUG) console.log('logins.DELETE: ' + req.params.customer_id);
-  try {
-    await loginsDal.deleteLogin(req.params.customer_id);
-    res.redirect('/logins/delete');
-  } catch {
-    res.render('503');
-  }
-});
-
-module.exports = router;
+module.exports = 
+  router;

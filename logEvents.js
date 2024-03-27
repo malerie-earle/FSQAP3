@@ -1,27 +1,22 @@
-// Imports
 const winston = require('winston');
 require('winston-daily-rotate-file');
 const fs = require('fs');
-const { combine, timestamp, printf, errors } = winston.format;
 const path = require('path');
 const color = require('colors');
-
-// Import the EventEmitter class
-const EventEmitter = require('events');
-
-// Create an instance of the EventEmitter class
-const myEmitter = new EventEmitter();
 
 // Create a 'logs' directory if it doesn't exist
 const logsDir = './logs';
 if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir);
+  try {
+    fs.mkdirSync(logsDir);
+  } catch (error) {
+    console.error('Error creating logs directory:', error);
+  }
 }
 
-// Get current date
+// Get current date in YYYY-MM-DD format
 function getCurrentDate() {
-  const today = new Date();
-  return today.toISOString().split('T')[0];
+  return new Date().toLocaleDateString('en-US', { timeZone: 'UTC' });
 }
 
 // Initiate daily log files inside the 'logs' directory for combined logs
@@ -45,12 +40,11 @@ const logger = winston.createLogger({
     error: 0,
     warn: 1,
     info: 2,
-    http: 3,
-    debug: 4,
+    debug: 3,
   },
-  format: combine(
-    timestamp({ format: 'YYYY-MM-DD hh:mm:ss.SSS A' }),
-    printf(info => {
+  format: winston.format.combine(
+    winston.format.timestamp({ format: 'YYYY-MM-DD hh:mm:ss.SSS A' }),
+    winston.format.printf(info => {
       let colorizedMessage = info.message;
       switch (info.level) {
         case 'info':
@@ -62,9 +56,6 @@ const logger = winston.createLogger({
         case 'error':
           colorizedMessage = color.red(info.message);
           break;
-        case 'http':
-          colorizedMessage = color.rainbow(info.message);
-          break;
         case 'debug':
           colorizedMessage = color.blue(info.message);
           break;
@@ -72,24 +63,25 @@ const logger = winston.createLogger({
       // Add background color to the entire message
       return color.bgBlack(`${info.timestamp} ${info.level}: ${colorizedMessage}`);
     }),
-    errors({ stack: true })
+    winston.format.errors({ stack: true })
   ),
   defaultMeta: { service: 'admin-service' },
   transports: [
     fileRotateTransport,
     errorFileRotateTransport,
-    new winston.transports.Console({
-      level: 'debug'
-    })
+    new winston.transports.Console()
   ],
   exitOnError: false,
   handleExceptions: true, 
   handleRejections: true 
 });
+console.log(logger);
 
-process.on('uncaughtException', (error) => {
-  logger.error(`Uncaught Exception: ${error.message}`);
-  process.exit(1);
+// Modify your error handling to capture stack traces
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  console.error('Stack Trace:', err.stack);
+  process.exit(1); 
 });
 
 // Fired when a log file is created
@@ -108,19 +100,11 @@ fileRotateTransport.on('logRemoved', (removedFilename) => {
   logger.info(`A log file was removed: ${newFilename}`);
 });
 
-// Listen for 'event' events
-myEmitter.on('event', (url, level, message) => {
-  logger[level](`Event occurred: ${message}. URL: ${url}`);
-});
-
 // Usage:
 logger.info('This is an information message.');
 logger.warn('This is a warning message.');
 logger.error('This is an error message.');
-logger.http('This is an HTTP message.');
 logger.debug('This is a debug message.');
 
 module.exports = {
-  logger,
-  myEmitter
-};
+logger };

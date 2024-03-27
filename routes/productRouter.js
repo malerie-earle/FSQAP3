@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../services/pg.auth_db');
+const { logger } = require('../logEvents');
 
 // GET - Read
 // All products - api/products

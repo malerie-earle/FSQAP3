@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newfie Nook</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+    <%- include('./partials/header.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class="delete content">
+            <form action="/customer/<%= customer.customer_id %>?_method=DELETE" method="POST">
+                <label>Are you sure you want to delete this Customer?</br>
+                    <input type="text" id="<%= customer.customer_id %>" name="login" value="<%= customer.username %>" readonly>
+                </label>
+                <button>DELETE</button>
+            </form>
+        </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+</html>
