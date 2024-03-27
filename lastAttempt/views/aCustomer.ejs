@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Customer</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<div>
+  <div class = "home">  
+<div class="customer-content">
+  <h2>Customer:</h2>
+  <% if (aCustomer && aCustomer.length > 0) { %>
+      <% aCustomer.forEach(function(aCustomer) { %>
+        <h3>
+          <b>Name:</b> <%= aCustomer.first_name %> <%= aCustomer.last_name %> <br>
+          <b>Email:</b> <%= aCustomer.email %><br>
+          <b>Username:</b> <%= aCustomer.username %> <br>
+          <b>Password:</b> <%= aCustomer.password %> <br>
+          <b>Address: </b> <%= aCustomer.address %><br>
+          <b>Payment Method:</b> <%= aCustomer.payment_method %><br>
+        </h3> 
+      <% }) %>
+  <% } else { %>
+      <p>No customer found</p>
+  <% } %>
+</div>
+<div class = "buttonDiv">
+<% if (aCustomer && aCustomer[0] === customer_id) { %>
+  <a href="/customer/<%= aCustomer.customer_id %>/edit/">Edit Customer</a>
+  <a href ="/customer/<%= aCustomer.customer_id %>/delete/">Delete Customer</a> 
+<% } %>
+<br><br>
+<a href="/customers/" class="button">All Customers</a>
+</div>
+</div>
+</div>
+</body>
+</html>

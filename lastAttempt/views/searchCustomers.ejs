@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search for a Customer</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class = "home">
+  <h2>Search for a Customer:</h2>
+
+  <div class = "searchDiv">
+  <h3>Search By:</h3>
+  
+  <div class = "search-type">
+    <label for="customer_id">Customer ID:</label>
+    <input type="radio" id="customer_id" name="search" value="customer_id">
+  </div>
+
+    <form class="search-form" action="/customer/id/" method="GET">
+      <h3>Search By ID:</h3>
+      <label for="customer_id">Search By ID:</label>
+      <input type="text" id="customerID" name="search" required>
+      <button>Search</button>
+      <br>
+    </form>
+
+  <div class = "search-type">
+    <label for="first_name">First Name:</label>
+    <input type="radio" id="first_name" name="search" value="first_name">
+  </div>
+
+  <form class="search-form" action="/customer/first_name/" method="GET">
+    <h3>Search By First Name:</h3>
+    <label for="first_name">Search By First Name:</label>
+    <input type="text" id="firstName" name="search" required>
+    <button>Search</button>
+    <br>
+  </form>
+
+  <div class = "search-type">
+    <label for="last_name">Last Name:</label>
+    <input type="radio" id="last_name" name="search" value="last_name">
+  </div>
+
+  <form class="search-form" action="/customer/last_name/" method="GET">
+    <h3>Search By Last Name:</h3>
+    <label for="last_name">Search By Last Name:</label>
+    <input type="text" id="lastName" name="search" required>
+    <button>Search</button>
+    <br>
+  </form>
+  
+  <div class = "search-type">
+    <label for="email">Email:</label>
+    <input type="radio" id="email" name="search" value="email">
+  </div>
+
+  <form class="search-form" action="/customer/email/" method="GET">
+    <h3>Search By Email:</h3>
+    <label for="email">Search By Email:</label>
+    <input type="text" id="eMail" name="search" required>
+    <button>Search</button>
+    <br>
+  </form>
+
+  <div class = "search-type">
+    <label for="username">Username:</label>
+    <input type="radio" id="username" name="search" value="username">
+  </div>
+
+  <form class="search-form" action="/customer/username/" method="GET">
+    <h3>Search By Username:</h3>
+    <label for="username">Search By Username:</label>
+    <input type="text" id="userName" name="search" required>
+    <button>Search</button>
+    <br>
+  </form>
+  <br><br>
+  <a href="/customers/" class="button">All Customers</a>
+  </div>  
+ </div>
+</div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      const searchForms = document.querySelectorAll('.search-form');
+
+      radioButtons.forEach(function(radioButton, index) {
+        radioButton.addEventListener('click', function() {
+          // Hide all search forms
+          searchForms.forEach(function(form) {
+            form.style.display = 'none';
+          });
+          if (radioButton.checked) {
+            searchForms[index].style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

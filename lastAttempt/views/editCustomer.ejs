@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Customer</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class = "home">
+  <h1>Edit Customer</h1>
+  <form class = "editForm" action="/customer/<%= customer.customer_id %>/edit" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" value="<%= customer.first_name %>" required>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" value="<%= customer.last_name %>" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<%= customer.email %>" required>
+    <label for="username">Username:</label>
+    <input type="text" name="username" value="<%= customer.username %>" required maxlength="50"><br />
+    <label for="password">New Password:</label>
+    <input type="password" name="password" placeholder="Leave blank to keep current" maxlength="255"><br />
+    <label for="address">Address:</label>
+    <input type="text" name="address" value="<%= customer.address %>" required maxlength="255"><br />
+    <label for="payment_method">Payment Method:</label>
+    <input type="text" name="payment_method" value="<%= customer.payment_method %>" required maxlength="255"><br />
+    <button>UPDATE</button>
+  </form>
+</div>
+</body>
+</html>
